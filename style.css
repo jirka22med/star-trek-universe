@@ -1,0 +1,625 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+:root {000000000000+hb
+    --primary-color:+ . #DAA520;
+    --secondary-color: #FF0000;
+    --bg-color: #000000;
+    --text-color: #FFFFFF;
+    --accent-color: #1E90FF;
+}
+
+body {
+    font-family: Consolas, monaco, monospace;
+    background-color: var(--bg-color);
+    color: green;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: block;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+    font-size: 21.5px;
+}
+
+header {
+    background-color: transparent; /* Pozadí hlavičky */
+    padding: 20px; /* Vyplň okolo */
+    border-bottom: 2px solid var(--primary-color); /* Spodní rámeček */
+}
+
+header h1 {
+    margin: 0;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white; /* Barva textu */
+    background-image: linear-gradient(90deg, rgba(255, 0, 0, 0.8), rgba(0, 0, 255, 0.8), rgba(255, 215, 0, 0.8)); /* Přechod červená, modrá, zlatá */
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.7), 0 0 20px rgba(0, 0, 255, 0.7), 0 0 30px rgba(255, 215, 0, 0.7); /* Zářivý efekt kolem textu */
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.8), 0 0 25px rgba(0, 0, 255, 0.8), 0 0 35px rgba(255, 215, 0, 0.8); /* Zářivý box-shadow */
+    animation: neonGlowHeader 1.5s ease-in-out infinite alternate; /* Neonová animace */
+}
+
+
+.nav {
+    background-color: rgba(0, 0, 0, 0.5); /* Pozadí navigace */
+    padding: 10px; /* Vyplň okolo */
+    backdrop-filter: blur(5px); /* Rozmazání pozadí */
+}
+
+.nav a {
+    color: white; /* Barva textu */
+    text-decoration: none; /* Bez podtržení */
+    font-size: 1.2em; /* Velikost písma */
+    font-weight: bold; /* Tučný text */
+    padding: 10px 15px; /* Vyplň okolo */
+    margin: 0 5px; /* Okraje */
+    display: inline-block; /* Blokový prvek pro vyplnění */
+    border: 2px solid var(--primary-color); /* Rámeček kolem odkazu */
+    border-radius: 5px; /* Zakulacené rohy */
+    transition: all 0.3s ease; /* Plynulý přechod */
+    background-image: linear-gradient(90deg, rgba(255, 0, 0, 0.6), rgba(0, 0, 255, 0.6), rgba(255, 215, 0, 0.6)); /* Přechod barev pro pozadí */
+}
+
+.nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Poloprůhledné pozadí při hoveru */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Zářivý efekt při hoveru */
+}
+
+
+.container {
+    padding: 20px;
+    flex: 1;
+}
+
+.ship-image {
+    max-width: 80%;
+    height: auto;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 0 0 20px var(--primary-color);
+    transition: transform 0.3s ease;
+}
+
+.ship-image:hover {
+    transform: scale(1.05);
+}
+
+.crew {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.crew-member {
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 15px;
+    max-width: 300px;
+    background-color: rgba(0, 63, 92, 0.7);
+    transition: all 0.3s ease;
+}
+
+.crew-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px var(--primary-color);
+}
+
+.crew-member img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid var(--primary-color);
+}
+
+footer {
+    background:transparent; /* Pozadí patičky */
+    padding: 10px; /* Vyplň okolo */
+    width: 98%; /* Šířka patičky */
+    text-align: center; /* Centrovaný text */
+    color: tomato; /* Barva textu */
+    border-top: transparent; /* Rámeček nahoře */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7); /* Zářivý efekt */
+    margin-top: 40px; /* Horní okraj */
+}
+
+footer h1 {
+    color: var(--text-color); /* Barva textu */
+    font-size: 24px; /* Velikost písma */
+    margin: 0; /* Bez okrajů */
+    padding: 10px; /* Vyplň okolo */
+    text-shadow: 
+        0 0 5px rgba(255, 0, 0, 0.8), 
+        0 0 10px rgba(0, 0, 255, 0.8), 
+        0 0 15px rgba(255, 215, 0, 0.8), 
+        0 0 20px rgba(255, 0, 0, 0.8), 
+        0 0 25px rgba(0, 0, 255, 0.8); /* Barevné stíny pro text */
+    transition: text-shadow 0.3s ease-in-out; /* Plynulý přechod */
+}
+
+footer h1:hover {
+    text-shadow: 
+        0 0 10px rgba(255, 0, 0, 1), 
+        0 0 20px rgba(0, 0, 255, 1), 
+        0 0 30px rgba(255, 215, 0, 1), 
+        0 0 40px rgba(255, 0, 0, 1), 
+        0 0 50px rgba(0, 0, 255, 1); /* Zesílené stíny při hoveru */
+}
+
+
+.hidden {
+    display: none;
+}
+
+.read-button {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.read-button:hover {
+    background-color: var(--primary-color);
+    box-shadow: 0 0 15px var(--primary-color);
+}
+
+.card-link {
+    display: inline-block;
+    padding: 15px 30px;
+    color: black;
+    text-transform: uppercase;
+    background-color: var;
+    border: 2px solid var(--secondary-color);
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    margin: 20px auto;
+    display: block;
+    text-align: center;
+}
+
+.card-link:hover {
+    box-shadow: 0 0 10px var(--secondary-color), 0 0 20px var(--secondary-color), 0 0 30px var(--secondary-color);
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+#warp-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+    background-color: var(--bg-color);
+}
+
+.star {
+    position: absolute;
+    background-color: var(--text-color);
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    opacity: 0.8;
+    transition: transform 0.1s linear, opacity 0.5s ease;
+    box-shadow: 0 0 10px var(--text-color), 0 0 20px var(--text-color), 0 0 30px var(--text-color);
+    animation: warp  linear infinite, warpSpeed  ease-in-out infinite;
+}
+
+@keyframes warpSpeed {
+    0%, 100% { transform: scale(0.0); }
+    50% { transform: scale(1.5); }
+}
+
+@keyframes warp {
+    0% {
+        transform: translateZ(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateZ(-1000px) scale(2);
+        opacity: 0;
+    }
+}
+
+.text-container {
+    display: block;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.readable-text {
+    margin-bottom: 10px;
+    color: var(--text-color);
+    text-shadow: 0 0 5px var(--accent-color);
+}
+
+.speaker {
+    display: block;
+    margin: 0 auto;
+    fill: var(--primary-color);
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    transition: fill 0.3s ease;
+    animation: pulse 1s infinite;
+}
+
+.speaker:hover {
+    fill: var(--accent-color);
+}
+
+.speaker.active {
+    fill: #4CAF50;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+
+     h1,  h3, h4, h5, h6 {
+    text-align: center; /* Centrování textu nadpisů */
+    border: 2px solid var(--primary-color); /* Rámeček okolo nadpisu */
+    padding: 10px; /* Vyplň mezi textem a rámečkem */
+    background-image: linear-gradient(90deg, rgba(255, 0, 0, 0.6), rgba(0, 0, 255, 0.6), rgba(255, 215, 0, 0.6)); /* Sytější přechod mezi červenou, modrou a zlatou */
+    border-radius: 10px; /* Zakulacené rohy rámečku */
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.6), 0 0 25px rgba(0, 0, 255, 0.6), 0 0 35px rgba(255, 215, 0, 0.6); /* Silnější záření v červené, modré a zlaté */
+    color: white; /* Bílá barva textu pro lepší kontrast */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.6); /* Lesklý efekt kolem textu */
+}
+        .fullscreen-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(218, 165, 32, 0.2);  /* Použití --primary-color s průhledností */
+    border: 2px solid #DAA520;  /* --primary-color */
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.fullscreen-button:hover {
+    background-color: rgba(218, 165, 32, 0.4);  /* Světlejší verze --primary-color */
+    box-shadow: 0 0 15px rgba(218, 165, 32, 0.7);  /* Záře kolem tlačítka */
+}
+
+.fullscreen-icon {
+    color: #DAA520;  /* --primary-color */
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+.fullscreen-button:hover .fullscreen-icon {
+    transform: scale(1.2);
+}
+
+/* Styly pro režim celé obrazovky */
+body:-webkit-full-screen,
+body:-moz-full-screen,
+body:-ms-fullscreen,
+body:fullscreen {
+    background-color: #000000;  /* --bg-color */
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+}
+
+body:-webkit-full-screen::-webkit-scrollbar,
+body:-moz-full-screen::-moz-scrollbar,
+body:-ms-fullscreen::-ms-scrollbar,
+body:fullscreen::-webkit-scrollbar {
+    width: 10px;
+}
+
+body:-webkit-full-screen::-webkit-scrollbar-track,
+body:-moz-full-screen::-moz-scrollbar-track,
+body:-ms-fullscreen::-ms-scrollbar-track,
+body:fullscreen::-webkit-scrollbar-track {
+    background: rgba(218, 165, 32, 0.1);  /* Lehce průhledná verze --primary-color */
+}
+
+body:-webkit-full-screen::-webkit-scrollbar-thumb,
+body:-moz-full-screen::-moz-scrollbar-thumb,
+body:-ms-fullscreen::-ms-scrollbar-thumb,
+body:fullscreen::-webkit-scrollbar-thumb {
+    background: rgba(218, 165, 32, 0.5);  /* Poloprůhledná verze --primary-color */
+}
+
+/* Přidáno pro lepší kompatibilitu s vaším existujícím stylem */
+body:-webkit-full-screen .star-trek-section,
+body:-moz-full-screen .star-trek-section,
+body:-ms-fullscreen .star-trek-section,
+body:fullscreen .star-trek-section {
+    background: linear-gradient(145deg, #000000, #1E1E1E);  /* Tmavší gradient pro režim celé obrazovky */
+    box-shadow: 0 0 40px rgba(218, 165, 32, 0.3);  /* Větší záře v režimu celé obrazovky */
+}
+
+body:-webkit-full-screen h1,
+body:-moz-full-screen h1,
+body:-ms-fullscreen h1,
+body:fullscreen h1 {
+    background-image: linear-gradient(90deg, rgba(255, 0, 0, 0.8), rgba(0, 0, 255, 0.8), rgba(255, 215, 0, 0.8));  /* Sytější barvy v režimu celé obrazovky */
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.8), 0 0 30px rgba(0, 0, 255, 0.8), 0 0 40px rgba(255, 215, 0, 0.8);  /* Silnější záře v režimu celé obrazovky */
+}
+#myCanvas {
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1000;
+    width: 100%;
+    height: 100%;
+    display: block;
+    pointer-events: none; /* Zakáže kliknutí a interakci s myší */
+
+   
+}
+.star-trek-section {
+    background-color: #0b0d1a;
+    color: #e6e6e6;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Star Trek', 'Arial', sans-serif;
+    border-radius: 10px;
+    
+    max-width: 630px;
+    margin: 0 auto 18px;
+   
+}
+
+.audio-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.audio {
+    flex: 1;
+}
+
+.trackTitle, #trackTitle {
+    font-size: 18px;
+    color: #00b3ff;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.audioPlayer, #audioPlayer {
+    width: 100%;
+    margin: 10px auto;
+    
+    border-radius: 8px;
+    background-color: rgba(26, 31, 54, 0.8);
+    padding: 10px;
+    margin-left: -5px;
+    margin-right: 0px;
+    
+}
+
+
+#audioControls {
+    position: relative;
+    display: flex;
+    justify-content: flex-end; /* Změněno z flex-end na center */
+    width: 100%;
+    padding: 0; /* Odstraněn padding-right */
+    margin-left: -23px
+}
+
+#audioControls button {
+    background-color: rgba(26, 31, 54, 0.8);
+    color: #e6e6e6;
+    border: 2px solid #00b3ff;
+    padding: 10px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+    display: inline-flex;
+    margin: 0 5px; /* Změněno z margin-left na margin pro stejné mezery */
+    margin-top: -27px;
+}
+
+/* Odstraněn pseudo-element ::after, který způsoboval posunutí */
+
+/* Přidáno pro omezení šířky skupiny tlačítek */
+.button-group {
+    display: flex;
+    justify-content: center;
+    max-width: 80%; /* Můžete upravit podle potřeby */
+    margin: 0 auto;
+}
+
+#audioControls button:first-child {
+    margin-left: 0; /* Odstraní levý okraj u prvního tlačítka */
+}
+
+#audioControls button:hover {
+    background-color: #00b3ff;
+    color: #0b0d1a;
+    display: flex;
+}
+
+#audioControls button:active {
+    background-color: #00ff85;
+    color: #0b0d1a;
+    display: flex;
+}
+
+@media (max-width: 700px) {
+    .audio-container {
+        flex-direction: column;
+    }
+    
+    .star-trek-section {
+        padding: 15px 10px;
+    }
+    
+    .trackTitle, #trackTitle {
+        font-size: 16px;
+    }
+    
+    .audioPlayer, #audioPlayer {
+        padding: 8px;
+    }
+    
+    #audioControls button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+    
+    #audioTimeline {
+        height: 8px;
+    }
+}
+ /* Odstranění výchozího vzhledu */
+.star-trek-section .audioPlayer {
+    -webkit-appearance: none;
+    appearance: none;
+    background: linear-gradient(to right, #1a1a2e, #16213e);
+    border: 2px solid var(--accent-color);
+    border-radius: 8px;
+    padding: 10px;
+    width: 100%;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+}
+
+/* Odstranění výchozího vzhledu pro ovládací prvky */
+.star-trek-section .audioPlayer:{
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.star-trek-section .audioPlayer: {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    border-radius: 6px;
+    padding: 5px;
+}
+
+/* Tlačítka přehrávání a ztlumení */
+
+.star-trek-section .audioPlayer: {
+    -webkit-appearance: none;
+    appearance: none;
+    background: linear-gradient(145deg, var(--accent-color), var(--highlight-color));
+    color: #ffffff;
+    border-radius: 50%;
+    padding: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px var(--accent-color);
+}
+
+/* Hover efekt pro tlačítka */
+
+.star-trek-section .audioPlayer: {
+   background: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(33, 150, 243, 0.3);
+}
+
+/* Posuvník - kolečko */
+.star-trek-section .audioPlayer: {
+    -webkit-appearance: none;
+    appearance: none;
+    background: var(--highlight-color);
+    border: 2px solid var(--accent-color);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--accent-color);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    height: 15px;
+    width: 15px;
+}
+
+/* Hover efekt pro posuvník */
+.star-trek-section .audioPlayer: {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px var(--highlight-color);
+}
+
+/* Dráha posuvníku */
+.star-trek-section .audioPlayer::-webkit-slider-thumb {
+     -webkit-appearance: none; /* Zrušení výchozího vzhledu */
+    width: 580px; /* Šířka posuvníku */
+    height: 12px; /* Výška posuvníku */
+    background: rgba(255, 255, 255, 0.3); /* Pozadí posuvníku */
+    border-radius: 5px; /* Zaoblení rohů */
+    outline: none; /* Odstranění okraje při aktivaci */
+}
+
+/* Volume slider */
+.star-trek-section .audioPlayer{
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    padding: 0 5px;
+}
+
+/* Focus stav */
+.star-trek-section .audioPlayer {
+    outline: none;
+    border-color: var(--highlight-color);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+/* Timeline a progress bar */
+.audio-timeline {
+    position: relative;
+    width: 100%;
+    max-width: 660px;
+    height: 8px; /* Zvětšení výšky pro lepší vzhled */
+    background-color: goldenrod; 
+    border-radius: 4px; /* Mírně větší zaoblení */
+    margin-top: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Přidání stínu pro efekt */
+}
+
+.audio-progress {
+    position: absolute;
+    height: 100%;
+    max-width: 660px;
+    background-color: red; 
+    border-radius: 4px; /* Shodné zaoblení s timeline */
+    width: 0%;
+    transition: width 0.2s linear; /* Mírně delší plynulost */
+}
+        
+
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(71, 169, 245, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(71, 169, 245, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(71, 169, 245, 0);
+    }
