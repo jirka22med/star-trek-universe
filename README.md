@@ -21,7 +21,12 @@
 - **🔊 Interaktivní Ovládání** - Klávesové zkratky a pokročilá navigace
 
 ---
+## 🔗 Odkaz na Živou Verzi
 
+Můstek je aktivní na adrese:
+[https://jirka22med.github.io/star-trek-universe/](https://jirka22med.github.io/star-trek-universe/)
+
+---
 ## 🛠️ Technologie & Struktura
 
 ### Frontend Stack
