@@ -632,3 +632,61 @@ body:fullscreen h1 {
         padding: 12px 20px;
     }
 }
+
+
+/* --- Futurstický kontejner pro textové sekce: SHRNUTÍ & PŘÍBĚHY --- */
+.content-text-box {
+    /* Vizuální základ: Tmavé, futuristické pozadí (jako v ilustraci, ale tmavší) */
+    background-color: rgba(10, 20, 40, 0.95);
+    
+    /* Neonový/Trek rámeček pro definici zóny */
+    border: 1px solid #00BFFF; /* Jasně modrý (Cyan/Trek Blue) okraj */
+    box-shadow: 0 0 10px rgba(0, 191, 255, 0.5); /* Lehká "neonová" záře kolem boxu */
+    
+    /* Vnitřní a vnější rozestupy */
+    padding: 25px; /* Vnitřní odsazení pro text */
+    margin-top: 5px; /* Snížíme mezeru od nadpisu, aby se opticky spojily */
+    border-radius: 0 0 6px 6px; /* Jen spodní rohy zaoblíme, aby se spojil s h2 */
+    
+    /* TYPOGRAFIE pro maximální čitelnost (jako na ilustračním obrázku) */
+    color: #E0FFFF; /* Světlejší text */
+    font-family: Arial, sans-serif; /* Klasický, čistý font pro čitelnost */
+    line-height: 1.8; /* ZVĚTŠENÉ ŘÁDKOVÁNÍ (jako v ukázce) */
+    font-size: 1.8em; /* JEŠTĚ VĚTŠÍ PÍSMO */
+    text-align: justify; 
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+}
+
+/* --- Styling hlavních nadpisů sekcí (H2), aby vizuálně navazovaly na box --- */
+.section h2 {
+    /* Pozadí a okraj jako horní část terminálu z ilustračního obrázku */
+    background-color: #002244; /* Tmavší modrá pro nadpisovou lištu */
+    color: #FFFFFF; /* Bílý text */
+    padding: 10px 25px;
+    margin: 0;
+    border-bottom: 1px solid #00BFFF; /* Oddělení od těla boxu */
+    border-radius: 6px 6px 0 0; /* Zaoblíme jen horní rohy */
+    box-shadow: 0 0 5px rgba(0, 191, 255, 0.3);
+}
+
+/* Speciální úpravy pro odstavce uvnitř boxu */
+.content-text-box p {
+    margin-bottom: 1.5em; /* VÝRAZNÁ MEZERA MEZI ODSTAVCI (jako v ukázce) */
+    text-indent: 0; 
+}
+
+/* --- Konverzace / Příběhy H3 Styling --- */
+.content-text-box h3 {
+    color: #00BFFF;
+    border-bottom: 1px dashed rgba(0, 191, 255, 0.5);
+    padding-bottom: 5px;
+    margin-top: 15px;
+    font-size: 1.1em; /* Udržíme je menší než hlavní H2 nadpis */
+}
+
+/* Zvýraznění jmen v chatu */
+.content-text-box strong {
+    color: #FFD700; /* Zlatá */
+    font-weight: bold;
+}
